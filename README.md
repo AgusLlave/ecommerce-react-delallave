@@ -1,8 +1,18 @@
-# React + Vite
+# E-commerce by Agustin de la Llave
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## _Project from Coderhouse's React course_
 
-Currently, two official plugins are available:
+## Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![working app preview](/ecommerce-delallave/docs/Preview.gif)
+
+## Built using
+
+- [ReactJS]
+- [ViteJS](https://vitejs.dev/guide/)
+- [Bootstrap](https://getbootstrap.com)
+- [Firebase](https://firebase.google.com/)
+
+## Test App
+
+[Deploy]()

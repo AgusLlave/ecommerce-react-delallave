@@ -1,24 +1,30 @@
-import { useEffect, useState } from "react";
-import { getProducts, getProductsByCategory } from "../../../asyncMock";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
+import { getProducts } from "../../services/firebase/firestore/products";
+import { useAsync } from "../../hooks/useAsync";
 
 const ItemListContainer = ({ greeting }) => {
-  const [products, setProducts] = useState([]);
-
   const { categoryId } = useParams();
 
-  useEffect(() => {
-    const asyncFunc = categoryId ? getProductsByCategory : getProducts;
+  const asyncFunction = () => getProducts(categoryId);
 
-    asyncFunc(categoryId)
-      .then((response) => {
-        setProducts(response);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, [categoryId]);
+  const {
+    data: products,
+    loading,
+    error,
+  } = useAsync(asyncFunction, [categoryId]);
+
+  if (loading) {
+    return <h1>Loading...</h1>;
+  }
+
+  if (error) {
+    return <h1>Hubo un error al cargar los productos</h1>;
+  }
+
+  if (products.length === 0) {
+    return <h1>No existen productos para esta categoria</h1>;
+  }
 
   return (
     <div className="container">
