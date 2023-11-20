@@ -4,15 +4,15 @@
 
 ## Preview
 
-![working app preview](/ecommerce-delallave/docs/Preview.gif)
+![App preview](/ecommerce-delallave/docs/Preview.gif)
 
 ## Built using
 
-- [ReactJS]
+- ReactJS
 - [ViteJS](https://vitejs.dev/guide/)
 - [Bootstrap](https://getbootstrap.com)
 - [Firebase](https://firebase.google.com/)
 
 ## Test App
 
-[Deploy]()
+[Deploy](https://ecommerce-react-delallave.vercel.app)
